@@ -1,0 +1,40 @@
+.signup-page {
+    background-color: #000814;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card {
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.title {
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 1rem;
+    font-size: xx-large;
+    color: white;
+}
+
+.detail-input {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    padding: 10px;
+    width: fit-content;
+    background-color: #FFC300;
+}
