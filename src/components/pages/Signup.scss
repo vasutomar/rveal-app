@@ -19,10 +19,12 @@
 }
 
 .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
     font-family: 'Source Code Pro', monospace;
-    margin-bottom: 1rem;
     font-size: xx-large;
     color: white;
+    margin-bottom: 1rem;
 }
 
 .detail-input {
@@ -30,11 +32,25 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    padding: 1rem 1rem 0 0;
 }
 
 .submit-button {
-    margin-top: 1rem;
-    padding: 10px;
-    width: fit-content;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
     background-color: #FFC300;
+    margin-bottom: 1rem;
+    font-size: medium;
+    border: none;
+    box-shadow: 5px 5px;
+}
+
+.form-input {
+    font-size: medium;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Source Code Pro', monospace;
 }
