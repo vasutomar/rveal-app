@@ -35,17 +35,23 @@
     padding: 1rem 1rem 0 0;
 }
 
-.submit-button {
+.submit-button {  
     margin-top: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     width: 100%;
+    font-weight: 500;
     font-family: 'Source Code Pro', monospace;
     background-color: #FFC300;
     margin-bottom: 1rem;
     font-size: medium;
     border: none;
     box-shadow: 5px 5px;
+
+    &:active {
+        transform: translateY(5px) translateX(5px);
+        box-shadow: 3px 3px;
+    }
 }
 
 .form-input {
@@ -53,4 +59,19 @@
     border: none;
     border-bottom: 1px solid black;
     font-family: 'Source Code Pro', monospace;
+}
+
+.alternate-link {
+    text-underline-offset: 4px;
+    font-size: medium;
+    margin-top: 1rem;
+    color: aliceblue;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
