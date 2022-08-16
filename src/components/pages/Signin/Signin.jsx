@@ -1,15 +1,15 @@
 import { Component } from "react";
 import axios from "axios";
 import "../Signup/Signup.scss";
+import dancing_girl from "../../../icons/dancing-girl.png";
 
 class Signin extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       error: false,
-      errorMessage: ''
-    }
+      errorMessage: "",
+    };
   }
 
   handleSignup = (event) => {
@@ -19,23 +19,23 @@ class Signin extends Component {
       password: event.target.form[1].value,
     };
 
-    axios.post('http://localhost:3020/user/signin',userData)
-    .then((response) => {
-      if(response.data.status === 200) {
-
-      } else {
+    axios
+      .post("http://localhost:3020/user/signin", userData)
+      .then((response) => {
+        if (response.data.status === 200) {
+        } else {
+          this.setState({
+            error: true,
+            errorMessage: response.data.message,
+          });
+        }
+      })
+      .catch((error) => {
         this.setState({
           error: true,
-          errorMessage : response.data.message
-        })
-      }
-    })
-    .catch((error) => {
-      this.setState({
-        error: true,
-        errorMessage : 'Please fill out the form correctly!'
-      })
-    });
+          errorMessage: "Please fill out the form correctly!",
+        });
+      });
   };
 
   render() {
@@ -45,18 +45,40 @@ class Signin extends Component {
         <form className="signup-card">
           <label className="detail-input">
             Username:
-            <input className="form-input" type="text" name="username" placeholder="JohnDoe123" />
+            <input
+              className="form-input"
+              type="text"
+              name="username"
+              placeholder="JohnDoe123"
+            />
           </label>
           <label className="detail-input">
             Password:
-            <input className="form-input" type="password" name="password" placeholder="John@123" />
+            <input
+              className="form-input"
+              type="password"
+              name="password"
+              placeholder="John@123"
+            />
           </label>
           <div>
-            <button onClick={(e) => this.handleSignup(e)} className="submit-button">SIGNIN</button>
+            <button
+              onClick={(e) => this.handleSignup(e)}
+              className="submit-button"
+            >
+              SIGNIN
+            </button>
           </div>
-          {this.state.error && <div className="error-message">{this.state.errorMessage}</div>}
+          {this.state.error && (
+            <div className="error-message">{this.state.errorMessage}</div>
+          )}
         </form>
-        <a href="signup" className="alternate-link">Don't have an account? Signup</a>
+        <a href="signup" className="alternate-link">
+          Don't have an account? Signup
+        </a>
+        <div className="characters">
+          <img className="dancing" src={dancing_girl}></img>
+        </div>
       </div>
     );
   }

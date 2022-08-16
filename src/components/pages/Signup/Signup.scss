@@ -1,5 +1,5 @@
 .signup-page {
-    background-color: #000814;
+    background-color: #001D3D;
     position: absolute;
     min-height: 100%;
     width: 100%;
@@ -74,4 +74,17 @@
     color: red;
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+
+.characters {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dancing{
+    height: 25%;
+    width: 25%;
 }
