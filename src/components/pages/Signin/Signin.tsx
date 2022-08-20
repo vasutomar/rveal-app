@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
-import dancing_girl from "../../../icons/dancing-girl.png";
+import { useNavigate } from "react-router-dom";
 import "../Signup/Signup.scss";
 
 const Signin = () => {
   const [error, setError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const handleSignup = (event) => {
     event.preventDefault();
@@ -18,6 +20,7 @@ const Signin = () => {
       .post("http://localhost:3020/user/signin", userData)
       .then((response) => {
         if (response.data.status === 200) {
+          navigate('/home');
         } else {
           setError(true);
           setErrorMessage(response.data.message);
@@ -61,9 +64,6 @@ const Signin = () => {
       <a href="signup" className="alternate-link">
         Don't have an account? Signup
       </a>
-      <div className="characters">
-        <img className="dancing" src={dancing_girl}></img>
-      </div>
     </div>
   );
 };
