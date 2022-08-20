@@ -1,14 +1,15 @@
 import { Component } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-// @ts-ignore
-import HomeLayout from "../../molecules/HomeLayout/HomeLayout.tsx"; 
+import './Home.scss';
 
 const Home = () => {
-  let navigate = useNavigate(); 
+  let navigate = useNavigate();
 
   return (
-    <HomeLayout component={<div>Component</div>}/>
+    <div className="home-page">
+      Hello!
+    </div>
   );
 };
 
