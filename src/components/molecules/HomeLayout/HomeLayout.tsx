@@ -38,7 +38,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = (props) => {
           menu
         </span>
         <div className="heading-container">
-          <div>Rveal</div>
+          <div>LockPaw</div>
         </div>
       </div>
       <div className="body">{component}</div>
@@ -51,7 +51,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = (props) => {
         >
           drafts
         </span>
-        <span className="material-symbols-outlined ask">tips_and_updates</span>
+        <span className="material-symbols-outlined ask">Key</span>
         <span
           onClick={() => {
             handleOpenProfile();

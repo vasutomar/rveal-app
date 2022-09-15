@@ -11,40 +11,52 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.guitarist {
-    height: 20rem;
-    width: 20rem;
-    margin-bottom: 2rem;
-}
-
-.landing-button {
-    height: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-weight: 500;
-    font-family: 'Source Code Pro', monospace;
-    background-color: #8FE3CF;
-    margin-bottom: 1rem;
-    color: #002B5B;
-    font-size: medium;
-    border: none;
-    box-shadow: 5px 5px #54BAB9;
-
-    &:active {
-        transform: translateY(5px) translateX(5px);
-        box-shadow: 3px 3px;
+    .app-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4rem;
+        font-weight: 500;
     }
-}
 
-.button-signup {
-    align-self: center;
-    margin-bottom: 1rem;
-}
+    .upper-landing {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 2;
 
-.button-signin {
-    align-self: center;
+        .app-title {
+            flex: 10;
+            width: 100%;
+        }
+
+        .action-holder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .btn {
+                width: 15rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .know-more {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .image-holder {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        align-items: flex-end;
+    }
 }

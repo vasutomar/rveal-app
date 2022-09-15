@@ -1,33 +1,39 @@
 import { Component } from "react";
-import guitarist from "../../../icons/guitar.png";
+// @ts-ignore
+import mountains from "../../../icons/mountains.svg";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import "./Landing.scss";
+// @ts-ignore
+import Button from "../../elementary/Button/Button.tsx";
 
 const Landing = () => {
-  let navigate = useNavigate(); 
-  const routeChange = (path: string) =>{ 
-    navigate('/'+path);
-  }
+  let navigate = useNavigate();
+  const routeChange = (type: string) => {
+    let path = type === "primary" ? "signin" : "signup";
+    navigate(`/${path}`);
+  };
 
   return (
     <div className="landing-page">
-      <img className="guitarist" src={guitarist}></img>
-      <div className="button-signup">
-        <button
-          className="landing-button"
-          onClick={ () => routeChange('signup')}
-        >
-          SIGNUP
-        </button>
+      <div className="upper-landing">
+        <div className="app-title">RVEAL</div>
+        <div className="action-holder">
+          <div className="btn">
+            <Button text="LOG IN" type="primary" clickHandler={routeChange} />
+          </div>
+          <div className="btn">
+            <Button
+              text="REGISTER"
+              type="secondary"
+              clickHandler={routeChange}
+            />
+          </div>
+          <div className="know-more">Know More</div>
+        </div>
       </div>
-      <div className="button-signin">
-        <button
-          className="landing-button"
-          onClick={ () => routeChange('signin')}
-        >
-          SIGNIN
-        </button>
+      <div className="image-holder">
+        <img src={mountains}></img>
       </div>
     </div>
   );
